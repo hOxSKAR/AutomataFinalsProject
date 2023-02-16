@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Automata Finals</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--Expression Selection-->
+    <div class="dropdown">
+        <button onclick="selectExpression()" class="dropbtn">Select Expression</button>
+        <div id="expressions" class="expressions">
+            <a href="#" onclick="expression1()">(bab + bbb) (a*b*) (a* + b*) (ba)* (aba) (bab + aba)* bb (a + b)* (bab + aba) (a + b)*</a>
+            <a href="#" onclick="expression2()">(1 + 0)* 1* 0* (101 + 01 + 000) (1 + 0)* (101 + 00)* (111 + 00 + 101) (1 + 0)*</a>
+        </div>
+    </div>
+
+    <!--CFG and PDA-->
+    <script src="script.js"></script>
+</body>
+</html>
