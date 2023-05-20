@@ -15,9 +15,22 @@
     </div>
 
     <!--CFG and PDA-->
-    <button class="btn2" onclick="cfg()">CFG</button>
-    <button class="btn2" onclick="pda()">PDA</button>
+    <button class="btn" onclick="cfg()">CFG</button>
+    <button class="btn" onclick="pda()">PDA</button>
 
+    <!--Expression Canvas-->
+    <p></p>
+    <canvas id="expressionCanvas" width="600" height="400"></canvas>
+
+    <!--Input Box-->
+    <p>Enter Expression to be Evaluated:</p>
+    <textarea id="input" cols="99" wrap="hard"></textarea>
+    <button class="btn" id="eval" onclick="eval()">Evaluate</button>
+
+    <!--Valid Expressions-->
+    <div id="valid"></div>
+
+    <!--JS script-->
     <script src="script.js"></script>
 </body>
 </html>

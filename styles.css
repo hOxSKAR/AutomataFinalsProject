@@ -1,5 +1,11 @@
+/* Text */
+p {
+  margin-top: 20px;
+  text-align: center;
+}
+
 /* Dropdown Button */
-.btn, .btn2 {
+.btn {
   background-color: #3498DB;
   color: white;
   padding: 16px;
@@ -9,7 +15,7 @@
 }
   
 /* Dropdown button on hover & focus */
-.btn:hover, .btn:focus, .btn2:hover, .btn2:focus {
+.btn:hover, .btn:focus {
   background-color: #2980B9;
 }
   
@@ -43,3 +49,29 @@
   
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+/* Canvas */
+#expressionCanvas {
+  border: 1px solid black;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Input */
+#input {
+  width: 400px;
+  height: 300px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Evaluate */
+#eval {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+}
+
