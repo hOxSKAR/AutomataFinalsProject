@@ -9,7 +9,7 @@ To Do List:
 - [ ] Simulation animations
 
 
-* Papacheck pa kay miss yung FA, CFG, at PDA bago tayo magproceed sa coding.
+* Papacheck pa kay miss yung PDA bago tayo magproceed sa coding.
 
 References used:
 - http://www.java2s.com/ref/javascript/javascript-dom-textarea-split-text-by-line.html (getting of input in textarea, split by newlines)
