@@ -1,15 +1,12 @@
 # FinalsProject
 
 To Do List:
-- [ ] 80% done GUI
+- [ ] New GUI - Jonathan
 - [ ] Expressions FA - bert
-- [ ] CFG and PDA
-- [ ] Printing out code - Vea
+- [ ] CFG - Vea
+- [ ] PDA - Em
 - [ ] Input logic code
 - [ ] Simulation animations
-
-
-* Papacheck pa kay miss yung PDA bago tayo magproceed sa coding.
 
 References used:
 - http://www.java2s.com/ref/javascript/javascript-dom-textarea-split-text-by-line.html (getting of input in textarea, split by newlines)
