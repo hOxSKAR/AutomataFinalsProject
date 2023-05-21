@@ -2,7 +2,7 @@
 
 To Do List:
 - [ ] New GUI - Jonathan
-- [ ] Expressions FA - bert
+- [x] Expressions FA - bert
 - [ ] CFG - Vea
 - [ ] PDA - Em
 - [ ] Input logic code
