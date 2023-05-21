@@ -3,6 +3,13 @@ var ctx = canvas.getContext("2d");
 var expression;
 var eval;
 var validInner = document.getElementById("valid").innerHTML;
+const cfgbutton = document.getElementById('cfgbutton');
+const cfgoverlay = document.getElementById('cfgoverlay');
+const cfg1 = document.getElementById('cfg1');
+const cfg2 = document.getElementById('cfg2');
+const noexpCFG = document.getElementById('noexpCFG');
+const pdabutton = document.getElementById('pdabutton');
+const pdaoverlay = document.getElementById('pdaoverlay');
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
@@ -23,6 +30,33 @@ window.onclick = function (event) {
         }
     }
 };
+
+// CFG
+cfgbutton.addEventListener('click', function() {
+    cfgoverlay.style.display = 'block';   
+    if (expression == "expression1") {
+        cfg1.style.display = 'block';
+        cfgoverlay.style.width = "26%";
+        cfgoverlay.style.height = "48%";
+    } else if (expression == "expression2") {
+        cfg2.style.display = 'block';
+        cfgoverlay.style.width = "22%";
+        cfgoverlay.style.height = "36%";
+    } else {
+        noexpCFG.style.display = 'block';
+        cfgoverlay.style.width = "43%";
+        cfgoverlay.style.height = "14%";
+    }
+});
+
+cfgoverlay.addEventListener('click', function(event) {
+    if (cfgoverlay.contains(event.target)) {
+        cfgoverlay.style.display = 'none';
+        cfg1.style.display = 'none';
+        cfg2.style.display = 'none';
+        noexpCFG.style.display = 'none';
+    }
+});
 
 // Expression FAs
 function expression1() {
@@ -460,31 +494,7 @@ function eval() {
     }
 }
 
-
-// Printing out of expressions and evaluation
-function printOut(expression, status) {
-    let final = [];
-
-    // Button maker
-    let btn = document.createElement("button");
-    btn.innerHTML = "Simulate?";
-    btn.onclick = simulate();
-    btn.class = "btn";
-
-    for (let i = 0; i < lines.length; i++) {
-        final.push({
-            Expression: "" + expression,
-            Evaluation: "" + status,
-            Simulate: ""
-        });
-    }
-
-    // Code creating table using JS objects...
-}
-
 // Simulation Animations
 function simulate() {
     // Enter code
 }
-
-// Arrow maker - used in FA diagram
