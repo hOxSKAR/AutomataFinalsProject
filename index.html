@@ -10,8 +10,6 @@
     <div class="dropdown">
         <center>
             <button onclick="selectExpression()" class="btn">Select Expression</button>
-            <button class="btn" id="cfg" onclick="cfg()">CFG</button>
-            <button class="btn" id="cfg" onclick="pda()">PDA</button>
         </center>
         <div id="expressions" class="expressions">
             <a href="#" onclick="expression1()">(bab + bbb) (a*b*) (a* + b*) (ba)* (aba) (bab + aba)* bb (a + b)* (bab + aba) (a + b)*</a>
@@ -21,6 +19,7 @@
     
 
     <!--CFG and PDA-->
+    <center>
     <button class="btn" id="cfgbutton">CFG</button>
     <div id="cfgoverlay">
         <p class="popup" id="cfg1">
@@ -51,7 +50,9 @@
         <p class="popup" id="noexpCFG">Please select an expression to display its CFG. <br><br>
         <b>Click on Pop Up to Close</b></p>
     </div>
-
+    
+    <button class="btn" id="pdabutton">PDA</button>
+    </center>
 
     <!--Expression Canvas-->
     <p></p>
@@ -67,5 +68,8 @@
 
     <!--JS script-->
     <script src="script.js"></script>
+</body>
+</html>
+   <script src="script.js"></script>
 </body>
 </html>
