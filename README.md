@@ -2,7 +2,7 @@
 
 To Do List:
 - [ ] 80% done GUI
-- [/] Expressions FA - bert
+- [ ] Expressions FA - bert
 - [ ] CFG and PDA
 - [ ] Printing out code - Vea
 - [ ] Input logic code
