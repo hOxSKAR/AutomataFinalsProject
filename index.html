@@ -6,54 +6,29 @@
 </head>
 <body>
     <!--Expression Selection-->
+    
     <div class="dropdown">
-        <button onclick="selectExpression()" class="btn">Select Expression</button>
+        <center>
+            <button onclick="selectExpression()" class="btn">Select Expression</button>
+            <button class="btn" id="cfg" onclick="cfg()">CFG</button>
+            <button class="btn" id="cfg" onclick="pda()">PDA</button>
+        </center>
         <div id="expressions" class="expressions">
             <a href="#" onclick="expression1()">(bab + bbb) (a*b*) (a* + b*) (ba)* (aba) (bab + aba)* bb (a + b)* (bab + aba) (a + b)*</a>
             <a href="#" onclick="expression2()">(1 + 0)* 1* 0* (101 + 01 + 000) (1 + 0)* (101 + 00)* (111 + 00 + 101) (1 + 0)*</a>
         </div>
     </div>
+    
 
     <!--CFG and PDA-->
-    <button class="btn" id="cfgbutton">CFG</button>
-    <div id="cfgoverlay">
-        <p class="popup" id="cfg1">
-            S -> CDGJabaKbbLML <br><br>
-            C -> bab | bbb <br>
-            D -> aE | bF | Λ <br>
-            E -> aE | aF | Λ <br>
-            F -> bF | Λ <br>
-            G -> aH | bI | Λ <br>
-            H -> aH | Λ <br>
-            I -> bI | Λ <br>
-            J -> baJ | Λ <br>
-            K -> babK | abaK | Λ <br>
-            L -> aL | bL | Λ <br>
-            M -> bab | aba <br><br>
-            <b>Click on Pop Up to Close</b>
-        </p>
-        <p class="popup" id="cfg2">
-            S -> XYZWXVUX <br><br>
-            X -> 1X | 0X | Λ <br>
-            Y -> 1Y | Λ <br>
-            Z -> 0Y | Λ <br>
-            W -> 101 | 1 | 000 <br>
-            V -> 101V | 00V | Λ <br>
-            U -> 111 | 00 | 101 <br><br>
-            <b>Click on Pop Up to Close</b>
-        </p>
-        <p class="popup" id="noexpCFG">Please select an expression to display its CFG. <br><br>
-        <b>Click on Pop Up to Close</b></p>
-    </div>
     
-    <button class="btn" id="pdabutton">PDA</button>
 
     <!--Expression Canvas-->
     <p></p>
-    <canvas id="expressionCanvas" width="700" height="300"></canvas>
+    <canvas id="expressionCanvas" width="700" height="400"></canvas>
 
     <!--Input Box-->
-    <p>Enter Expressions to be Evaluated:</p>
+    <p>Enter Expression to be Evaluated:</p>
     <textarea id="input" cols="99" wrap="hard"></textarea>
     <button class="btn" id="eval" onclick="eval()">Evaluate</button>
 

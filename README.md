@@ -3,7 +3,7 @@
 To Do List:
 - [ ] New GUI - Jonathan
 - [x] Expressions FA - bert
-- [x] CFG - Vea
+- [ ] CFG - Vea
 - [ ] PDA - Em
 - [ ] Input logic code
 - [ ] Simulation animations
