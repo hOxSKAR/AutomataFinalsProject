@@ -104,7 +104,7 @@ p {
   display: none;
   position: absolute;
   margin-top: 51px;
-  width: 200px;
+  width: 300px;
   min-width: 150px;
   overflow: hidden;
   background-color: #251d17;
@@ -136,6 +136,11 @@ p {
   margin-left: 10px;
   margin-top: 10px;
   color: white;
+}
+
+#noexpPDA {
+  width: 300px;
+  min-width: 160px;
 }
 
 /* Canvas */
