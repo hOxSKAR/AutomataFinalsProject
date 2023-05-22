@@ -4,7 +4,7 @@ To Do List:
 - [x] New GUI - Kirk
 - [x] Expressions FA - bert
 - [x] CFG - Vea
-- [ ] PDA - Em
+- [x] PDA - Em
 - [ ] Input logic code
 - [ ] Simulation animations
 
