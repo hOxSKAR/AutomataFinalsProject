@@ -10,6 +10,9 @@ const cfg2 = document.getElementById('cfg2');
 const noexpCFG = document.getElementById('noexpCFG');
 const pdabutton = document.getElementById('pdabutton');
 const pdaoverlay = document.getElementById('pdaoverlay');
+const pda1 = document.getElementById('pda1');
+const pda2 = document.getElementById('pda2');
+const noexpPDA = document.getElementById('noexpPDA');
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
@@ -33,28 +36,62 @@ window.onclick = function (event) {
 
 // CFG
 cfgbutton.addEventListener('click', function() {
-    cfgoverlay.style.display = 'block';   
+    cfgoverlay.style.display = 'block'; 
     if (expression == "expression1") {
         cfg1.style.display = 'block';
-        cfgoverlay.style.width = "26%";
-        cfgoverlay.style.height = "48%";
     } else if (expression == "expression2") {
         cfg2.style.display = 'block';
-        cfgoverlay.style.width = "22%";
-        cfgoverlay.style.height = "36%";
     } else {
         noexpCFG.style.display = 'block';
-        cfgoverlay.style.width = "43%";
-        cfgoverlay.style.height = "14%";
     }
+
+    // Calculate and set the height of cfgoverlay
+    const visiblePopup = cfg1.style.display === "block"
+    ? cfg1
+    : cfg2.style.display === "block"
+    ? cfg2
+    : noexpCFG;
+    const popupHeight = visiblePopup.offsetHeight;
+    cfgoverlay.style.height = `${popupHeight + 20}px`;
 });
 
-cfgoverlay.addEventListener('click', function(event) {
-    if (cfgoverlay.contains(event.target)) {
+document.addEventListener('click', function(event) {
+    if (!cfgoverlay.contains(event.target) && event.target !== cfgbutton) {
         cfgoverlay.style.display = 'none';
         cfg1.style.display = 'none';
         cfg2.style.display = 'none';
         noexpCFG.style.display = 'none';
+    }
+});
+
+// PDA
+pdabutton.addEventListener('click', function() {
+    pdaoverlay.style.display = 'block'; 
+    if (expression == "expression1") {
+        pda1.style.display = 'block';
+    } else if (expression == "expression2") {
+        pda2.style.display = 'block';
+    } else {
+        noexpPDA.style.display = 'block';
+    }
+
+    const visiblePopup = pda1.style.display === "block"
+    ? pda1
+    : pda2.style.display === "block"
+    ? pda2
+    : noexpPDA;
+    const popupHeight = visiblePopup.offsetHeight;
+    pdaoverlay.style.height = `${popupHeight + 20}px`;
+    const popupWidth = visiblePopup.offsetWidth;
+    pdaoverlay.style.width = `${popupWidth + 20}px`;
+});
+
+document.addEventListener('click', function(event) {
+    if (!pdaoverlay.contains(event.target) && event.target !== pdabutton) {
+        pdaoverlay.style.display = 'none';
+        pda1.style.display = 'none';
+        pda2.style.display = 'none';
+        noexpPDA.style.display = 'none';
     }
 });
 
@@ -152,6 +189,13 @@ function expression1() {
                     // label the transition
                     ctx.save();
                     ctx.translate(midX, midY);
+                    // Text shadow
+                    ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+                    ctx.shadowBlur = 4;
+                    ctx.shadowOffsetX = 2;
+                    ctx.shadowOffsetY = 2;
+                    // Text color
+                    ctx.fillStyle = "blue";
                     ctx.fillText(symbol, labelX, labelY);
                     ctx.restore();
                 } else {
@@ -165,6 +209,13 @@ function expression1() {
                     // label the transition
                     ctx.save();
                     ctx.translate(midX, midY);
+                    // Text shadow
+                    ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+                    ctx.shadowBlur = 4;
+                    ctx.shadowOffsetX = 2;
+                    ctx.shadowOffsetY = 2;
+                    // Text color
+                    ctx.fillStyle = "blue";
                     ctx.fillText(symbol, labelX, labelY);
                     ctx.restore();
                 }
@@ -178,6 +229,13 @@ function expression1() {
                 // label the transition
                 ctx.save();
                 ctx.translate(midX, midY);
+                // Text shadow
+                ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+                ctx.shadowBlur = 4;
+                ctx.shadowOffsetX = 2;
+                ctx.shadowOffsetY = 2;
+                // Text color
+                ctx.fillStyle = "blue";
                 ctx.fillText(symbol, labelX, labelY);
                 ctx.restore();
             }
@@ -232,6 +290,13 @@ function expression1() {
             const labelHeight = 2;
             const labelX = -labelWidth / 2;
             const labelY = labelHeight / 2;
+            // Text shadow
+            ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+            ctx.shadowBlur = 4;
+            ctx.shadowOffsetX = 2;
+            ctx.shadowOffsetY = 2;
+            // Text color
+            ctx.fillStyle = "blue";
             ctx.fillText(symbol, labelX, labelY);
             ctx.restore();
         }
@@ -307,7 +372,7 @@ function expression2() {
         { from: q1, to: q2, symbol: '0' },
         { from: q2, to: q3, symbol: '0,1' },
         { from: q1, to: q3, symbol: '1' },
-        { from: q3, to: q4, symbol: '1' },
+        { from: q3, to: q4, symbol: '0' },
         { from: q3, to: q5, symbol: '1' },
         { from: q5, to: q7, symbol: '1' },
         { from: q5, to: q6, symbol: '0' },
@@ -335,7 +400,7 @@ function expression2() {
         // draw the line
         ctx.beginPath();
         ctx.moveTo(from.x + radius * cos, from.y + radius * sin);
-
+        
         ctx.font = "bold 16px Arial";
         if (from === to) {
             const loopRadius = 11;
@@ -355,6 +420,13 @@ function expression2() {
                 // label the transition
                 ctx.save();
                 ctx.translate(midX, midY);
+                // Text shadow
+                ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+                ctx.shadowBlur = 4;
+                ctx.shadowOffsetX = 2;
+                ctx.shadowOffsetY = 2;
+                // Text color
+                ctx.fillStyle = "blue";
                 ctx.fillText(symbol, labelX, labelY);
                 ctx.restore();
             } else { //if the state is below
@@ -367,6 +439,14 @@ function expression2() {
                 // label the transition
                 ctx.save();
                 ctx.translate(midX, midY);
+                // Text shadow
+                ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+                ctx.shadowBlur = 4;
+                ctx.shadowOffsetX = 2;
+                ctx.shadowOffsetY = 2;
+
+                // Text color
+                ctx.fillStyle = "blue";
                 ctx.fillText(symbol, labelX, labelY);
                 ctx.restore();
             }
@@ -419,6 +499,15 @@ function expression2() {
             const labelHeight = 2;
             const labelX = -labelWidth / 2;
             const labelY = labelHeight / 2;
+
+            // Text shadow
+            ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+            ctx.shadowBlur = 4;
+            ctx.shadowOffsetX = 2;
+            ctx.shadowOffsetY = 2;
+
+            // Text color
+            ctx.fillStyle = "blue";
             ctx.fillText(symbol, labelX, labelY);
             ctx.restore();
         }
