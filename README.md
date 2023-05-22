@@ -8,7 +8,7 @@ To Do List:
 - [ ] Input logic code
 - [ ] Simulation animations
 
-GitHub Pages Link: https://yahan-vdg.github.io/AutomataFinalsProject/#
+GitHub Pages Link: https://yahan-vdg.github.io/AutomataFinalsProject/
 
 References used:
 - http://www.java2s.com/ref/javascript/javascript-dom-textarea-split-text-by-line.html (getting of input in textarea, split by newlines)
