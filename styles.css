@@ -1,7 +1,20 @@
 /* Text */
+h1 {
+  font-family: Helvetica;
+  font-size: 5vw;
+  text-transform: uppercase;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  
+  background: #352000;
+  color: #fbeee0;
+ 
+}
+
 body {
   background-color: #ffd699;
 }
+
 
 p {
   margin-top: 20px;
@@ -10,6 +23,7 @@ p {
   font-weight: 600;
   font-size: 18px;
 }
+
 
 /* Dropdown Button */
 
