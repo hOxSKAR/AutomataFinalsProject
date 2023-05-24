@@ -27,8 +27,19 @@ p {
   font-family: Helvetica;
   font-weight: 600;
   font-size: 18px;
+  text-transform: uppercase;
+  color: #e7e7e7;
 }
 
+.box {
+  background: #554e44;
+  width: 50%;
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  box-shadow: 0px 10px 10px rgb(42, 42, 42);
+}
 
 /* Dropdown Button */
 
