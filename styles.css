@@ -1,16 +1,16 @@
 /* Text */
 h1 {
   font-family: Helvetica;
-  font-size: 5vw;
+  font-size: 50px;
+  text-align: center;
   text-transform: uppercase;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   border: 0px;
   margin-top: 0px;
   background: #281801;
   color: #ffd699;
   box-shadow: 0px 10px 10px rgb(42, 42, 42);
- 
 }
 
 body {
@@ -19,7 +19,6 @@ body {
   border: 0px;
   margin: 0px;
 }
-
 
 p {
   margin-top: 20px;
@@ -31,6 +30,7 @@ p {
   color: #e7e7e7;
 }
 
+<<<<<<< HEAD
 .box {
   background: #554e44;
   width: 50%;
@@ -41,6 +41,8 @@ p {
   box-shadow: 0px 10px 10px rgb(42, 42, 42);
 }
 
+=======
+>>>>>>> bfd4bea471f0e8e526f4c21e741f78597c3f79c3
 /* Dropdown Button */
 
 .btn {
@@ -198,5 +200,3 @@ p {
   margin-left: auto;
   margin-top: 10px;
 }
-
-
