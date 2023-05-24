@@ -10,6 +10,8 @@ To Do List:
 
 GitHub Pages Link: https://yahan-vdg.github.io/AutomataFinalsProject/
 
+
+
 References used:
 - http://www.java2s.com/ref/javascript/javascript-dom-textarea-split-text-by-line.html (getting of input in textarea, split by newlines)
 - https://sebhastian.com/javascript-create-button/ (making button using JS)
