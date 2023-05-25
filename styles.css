@@ -30,21 +30,19 @@ p {
   color: #e7e7e7;
 }
 
-<<<<<<< HEAD
 .box {
   background: #554e44;
-  width: 50%;
+  width: 80%;
   height: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 50px;
   box-shadow: 0px 10px 10px rgb(42, 42, 42);
 }
 
-=======
->>>>>>> bfd4bea471f0e8e526f4c21e741f78597c3f79c3
 /* Dropdown Button */
-
 .btn {
   background-color: #fbeee0;
   border: 2px solid #422800;
@@ -185,12 +183,42 @@ p {
 }
 
 /* Input */
+.inputlines {
+  display: flex;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.linenum {
+  width: 12px;
+  height: 100%;
+  border-right: 1px solid #ddd;
+  padding: 5px;
+  background-color: #f5f5f5;
+  font-family: monospace;
+  font-size: 14px;
+  color: #888;
+  pointer-events: none;
+  user-select: none;
+  white-space: pre;
+}
+
 #input {
-  width: 400px;
+  width: 355px;
   height: 300px;
-  display: block;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
+}
+
+.simbtn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.simbtn {
+  white-space: nowrap;
+  display: block;
 }
 
 /* Evaluate */

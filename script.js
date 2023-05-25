@@ -13,6 +13,8 @@ const pdaoverlay = document.getElementById('pdaoverlay');
 const pda1 = document.getElementById('pda1');
 const pda2 = document.getElementById('pda2');
 const noexpPDA = document.getElementById('noexpPDA');
+const buttonContainer = document.getElementById('simbtn');
+const resultDiv = document.getElementById("result");
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
@@ -552,10 +554,56 @@ function expression2() {
     }
 }
 
+function updateLineNumbers() {
+    var codeInput = document.getElementById('input');
+    var lineNumbers = document.querySelector('.linenum');
+    
+    var lines = codeInput.value.split('\n');
+    var lineNumbersHTML = '';
+    
+    for (var i = 0; i < lines.length; i++) {
+      lineNumbersHTML += i + 1 + '\n';
+    }
+    
+    lineNumbers.textContent = lineNumbersHTML;
+  }
+  
+  // Add event listener to the code input
+  var codeInput = document.getElementById('input');
+  codeInput.addEventListener('input', updateLineNumbers);
+  
+  // Initial update of line numbers
+  updateLineNumbers();  
+
+// Button generator
+function generateButtons(lines) {
+    for (let i = 0; i < lines.length; i++) {
+      const button = document.createElement('button');
+      button.textContent = 'Simulate String #' + (i + 1);
+      button.classList.add('simbtn');
+      button.addEventListener('click', () => simulateString(lines[i]));
+  
+      buttonContainer.appendChild(button);
+    }
+}
+
+// Generate Results
+function generateResult(results, resultDiv) {
+    results.forEach(text => {
+        const p = document.createElement('p');
+        p.textContent = text;
+        resultDiv.appendChild(p);
+    })
+}
+
 function eval() {
     // Textarea getting
     let userInput = document.getElementById("input");
     let lines = userInput.value.split("\n");
+    const expression1 = '(bab+bbb)(a*b*)(a*+b*)(ba)*(aba)(bab+aba)*bb(a+b)*(bab+aba)(a+b)*';
+    const expression2 = '(1+0)*1*0*(101+01+000)(1+0)*(101+00)*(111+00+101)(1+0)*';
+    var results = [];
+    
     // Remove spaces from each line
     lines = lines.map(line => line.replace(/\s/g, ""));
 
@@ -567,6 +615,7 @@ function eval() {
                     alert("Expression 1 can only contain 'a' or 'b'");
                     return;
                 }
+                // validation code here
             }
             break;
         case "expression2":
@@ -576,14 +625,18 @@ function eval() {
                     alert("Expression 2 can only contain '0' or '1'");
                     return;
                 }
+                // validation code here
             }
             break;
         default:
             alert("Please enter expressions to be evaluated.");
     }
+    buttonContainer.innerHTML = '';
+    generateButtons(lines);
+    generateResults(results, resultDiv);
 }
 
-// Simulation Animations
-function simulate() {
-    // Enter code
+// Simulate code
+function simulateString(line) {
+    // enter code here
 }
