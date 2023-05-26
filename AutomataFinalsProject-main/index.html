@@ -1,0 +1,78 @@
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Automata Finals</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Automata Final Project</h1>
+
+    <!--Expression Selection-->
+<center>
+ <div class="box">  
+    <div class="dropdown">
+        <button onclick="selectExpression()" class="btn" id="firstrw">Select Expression</button>
+        <div id="expressions" class="expressions">
+            <a onclick="expression1()"><b>Expression 1:</b> (bab + bbb) (a*b*) (a* + b*) (ba)* (aba) (bab + aba)* bb (a + b)* (bab + aba) (a + b)*</a>
+            <a onclick="expression2()"><b>Expression 2:</b>(1 + 0)* 1* 0* (101 + 01 + 000) (1 + 0)* (101 + 00)* (111 + 00 + 101) (1 + 0)*</a>
+        </div>
+    </div>
+
+    <!--CFG and PDA-->
+    <div id="secondrw">
+    <button class="btn" id="cfgbutton">CFG</button>
+    <div id="cfgoverlay">
+        <p id="cfg1">
+            S → CDGJabaKbbLML <br><br>
+            C → bab | bbb <br>
+            D → aE | bF | Λ <br>
+            E → aE | aF | Λ <br>
+            F → bF | Λ <br>
+            G → aH | bI | Λ <br>
+            H → aH | Λ <br>
+            I → bI | Λ <br>
+            J → baJ | Λ <br>
+            K → babK | abaK | Λ <br>
+            L → aL | bL | Λ <br>
+            M → bab | aba
+        </p>
+        <p id="cfg2">
+            S → XYZWXVUX <br><br>
+            X → 1X | 0X | Λ <br>
+            Y → 1Y | Λ <br>
+            Z → 0Y | Λ <br>
+            W → 101 | 1 | 000 <br>
+            V → 101V | 00V | Λ <br>
+            U → 111 | 00 | 101
+        </p>
+        <p id="noexpCFG">Please select an expression to display its CFG.</p>
+    </div>
+
+    <button class="btn" id="pdabutton">PDA</button>
+    <div id="pdaoverlay">
+        <img src="images/expression1pda.png" id="pda1">
+        <img src="images/expression1pda.png" id="pda2">
+        <p id="noexpPDA">Please select an expression to display its PDA.</p>
+    </div>
+    </div>
+    
+    <!--Expression Canvas-->
+    <p></p>
+    <canvas id="expressionCanvas" width="700" height="350"></canvas>
+
+    <!--Input Box-->
+    <p>Enter String(s) to be Evaluated:</p>
+    <textarea id="input" cols="99" wrap="hard"></textarea>
+    <button class="btn" id="eval" onclick="eval()">Evaluate</button>
+
+    <!--Valid Expressions-->
+    <div id="valid"></div>
+ </div>
+</center>
+    <!--JS script-->
+    <script src="script.js"></script>
+</body>
+</html>
+   <script src="script.js"></script>
+</body>
+</html>
